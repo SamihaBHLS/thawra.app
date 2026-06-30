@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="المتحف الرقمي للثورة الجزائرية - رحلة عبر ذاكرة وطن">
+
+    <!-- Title -->
+    <title>Algerian Revolution | Digital Museum</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="thawra.js" defer></script>
+</head>   
+<body>
+
+    <!-- ============================================================ -->
+    <!-- 10️⃣ INTRO / LOADER -->
+    <!-- ============================================================ -->
+    <div id="loader">
+        <div class="year-display">
+            <span class="year-number" id="loaderYear">1954</span>
+        </div>
+        <div class="intro-line">— الثورة الجزائرية —</div>
+        <div class="loading-bar">
+            <div class="fill" id="loaderFill"></div>
+        </div>
+        <div class="final-title" id="loaderFinalTitle">
+            <span class="highlight">ALGERIAN</span> REVOLUTION
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 16️⃣ PROGRESS BAR -->
+    <!-- ============================================================ -->
+    <div id="progress-bar"></div>
+
+    <!-- ============================================================ -->
+    <!-- 9️⃣ SIDEBAR -->
+    <!-- ============================================================ -->
+    <aside id="sidebar">
+        <div class="logo">
+            <i class="fas fa-star"></i> الثورة
+        </div>
+        <nav>
+            <a href="#home" class="active"><span class="number">01</span><i class="fas fa-home"></i><span class="label">الرئيسية</span><span class="dot"></span></a>
+            <a href="#timeline"><span class="number">02</span><i class="fas fa-clock"></i><span class="label">الجدول الزمني</span><span class="dot"></span></a>
+            <a href="#heroes"><span class="number">03</span><i class="fas fa-users"></i><span class="label">الشخصيات</span><span class="dot"></span></a>
+            <a href="#crimes"><span class="number">04</span><i class="fas fa-skull"></i><span class="label">الجرائم</span><span class="dot"></span></a>
+            <a href="#negotiations"><span class="number">05</span><i class="fas fa-handshake"></i><span class="label">المفاوضات</span><span class="dot"></span></a>
+            <a href="#statistics"><span class="number">06</span><i class="fas fa-chart-bar"></i><span class="label">الإحصائيات</span><span class="dot"></span></a>
+            <a href="#videos"><span class="number">07</span><i class="fas fa-video"></i><span class="label">الفيديوهات</span><span class="dot"></span></a>
+            <a href="#weapons"><span class="number">08</span><i class="fas fa-gun"></i><span class="label">الأسلحة</span><span class="dot"></span></a>
+            <a href="#legacy"><span class="number">09</span><i class="fas fa-landmark"></i><span class="label">الإرث</span><span class="dot"></span></a>
+            <a href="#map"><span class="number">10</span><i class="fas fa-map-marked-alt"></i><span class="label">الخريطة</span><span class="dot"></span></a>
+            <a href="#sources"><span class="number">11</span><i class="fas fa-book"></i><span class="label">المصادر</span><span class="dot"></span></a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="progress-small">PROGRESS <span id="sidebarProgress">0</span>%</div>
+        </div>
+    </aside>
+
+    <!-- ============================================================ -->
+    <!-- 16️⃣ BACK TO TOP -->
+    <!-- ============================================================ -->
+    <button id="backToTop" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ============================================================ -->
+    <!-- MAIN CONTENT -->
+    <!-- ============================================================ -->
+    <main>
+
+        <!-- ========================================================== -->
+        <!-- 01 الرئيسية - HERO -->
+        <!-- ========================================================== -->
+        <section id="home">
+            <!-- Hero Background -->
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-noise"></div>
+
+           
+            <!-- Sound Button -->
+            <button class="hero-sound" id="soundToggle" title="تشغيل الموسيقى">
+                
+            </button>
+
+            <div class="hero-content">
+                <!-- Title -->
+                <h1 class="hero-title">الثورة <span>الجزائرية</span></h1>
+
+                <!-- Years -->
+                <div class="hero-years">1954 <i class="fas fa-arrow-left" style="margin:0 10px; font-size:1rem;"></i> 1962</div>
+
+                <!-- Description -->
+                <p class="hero-tagline">
+                    <i class="fas fa-quote-right"></i>ثورة لم تكن مجرد حرب... بل كانت ميلاد أمة.
+                </p>
+
+                <!-- Button -->
+                <a href="#timeline" class="btn-journey">
+                    <span class="btn-bg"></span>
+                    <span class="btn-border"></span>
+                    <span class="btn-glow"></span>
+                    <span class="btn-content">
+                        <span class="btn-text">ابدأ الرحلة</span>
+                         <i class="fas fa-play"></i>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Quote -->
+            <div class="hero-quote" id="heroQuote">
+                <i class="fas fa-quote-right"></i>إذا الشعب يوماً أراد الحياة...
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 02 الجدول الزمني - CINEMATIC ARCHIVE TIMELINE ⭐️ -->
+        <!-- ========================================================== -->
+        <section id="timeline">
+            <!-- Ambient background particles -->
+            <div class="archive-particles" id="particles"></div>
+            
+            <!-- Scan lines -->
+            <div class="scan-lines"></div>
+            
+            <!-- Vignette -->
+            <div class="vignette"></div>
+            
+            <!-- Floating accents -->
+            <div class="floating-accent" style="top:10%;right:5%;">✧</div>
+            <div class="floating-accent" style="bottom:15%;left:8%;animation-delay:-7s;">✧</div>
+            <div class="floating-accent" style="top:50%;left:3%;animation-delay:-14s;font-size:5rem;">✦</div>
+            
+            <!-- Quote overlay -->
+            <div class="quote-overlay" id="quoteOverlay"></div>
+
+            <!-- Main Stage -->
+            <div class="archive-stage">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <div class="section-number"><span class="num">02</span> / 11</div>
+                    <div class="section-quote"></div>
+                    <div class="section-title">الجدول <span class="highlight">الزمني</span></div>
+                </div>
+
+                <!-- Timeline Track -->
+                <div class="timeline-track">
+                    <div class="timeline-progress" id="timelineProgress" style="width:0%"></div>
+                    <div class="timeline-dot" id="timelineDot" style="right:0%"></div>
+                </div>
+                <div class="timeline-markers" id="timelineMarkers"></div>
+
+                <!-- Archive Card -->
+                <div class="archive-card-wrapper" id="cardWrapper">
+                    <!-- Cards injected by JS -->
+                </div>
+
+                <!-- Controls -->
+                <div class="archive-controls">
+                    <button class="ctrl-btn" id="btnPrev" title="السابق">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="ctrl-btn playing" id="btnPlay" title="إيقاف / تشغيل">
+                        <i class="fas fa-pause" id="playIcon"></i>
+                    </button>
+                    <button class="ctrl-btn" id="btnNext" title="التالي">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="year-nav" id="yearNav"></div>
+                </div>
+            </div>
+        </section>
+
+         <!-- ========================================================== -->
+<!-- 03 الشخصيات - HALL OF HEROES ⭐️ -->
+<!-- ========================================================== -->
+<section id="heroes">
+    <!-- Section Header -->
+    <div class="heroes-header">
+        <div class="section-number"><span class="num">03</span> / 11</div>
+        <div class="heroes-subtitle">HALL OF HEROES</div>
+        <div class="heroes-title">شخصيات <span class="highlight">صنعت التاريخ</span></div>
+        
+    </div>
+
+    <!-- Search & Filters -->
+    <div class="heroes-toolbar">
+        <div class="heroes-search-wrapper">
+            <input 
+                type="text" 
+                class="heroes-search-input" 
+                id="heroesSearch" 
+                placeholder="ابحث عن شخصية..."
+                autocomplete="off"
+            >
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="heroes-filters" id="heroesFilters">
+            <button class="heroes-filter-btn active" data-filter="all">All</button>
+            <button class="heroes-filter-btn" data-filter="military">Military</button>
+            <button class="heroes-filter-btn" data-filter="political">Political</button>
+            <button class="heroes-filter-btn" data-filter="women">Women</button>
+            <button class="heroes-filter-btn" data-filter="martyrs">Martyrs</button>
+            <button class="heroes-filter-btn" data-filter="diplomats">Diplomats</button>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="heroes-carousel-container" id="heroesCarouselContainer">
+        <button class="heroes-carousel-arrow prev" id="heroesPrev" title="السابق">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <div class="heroes-carousel-viewport" id="heroesViewport">
+            <div class="heroes-carousel-track" id="heroesTrack">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+        
+        <button class="heroes-carousel-arrow next" id="heroesNext" title="التالي">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+    </div>
+
+    <!-- Empty State (hidden by default) -->
+    <div class="heroes-empty-state" id="heroesEmptyState" style="display:none;">
+        <i class="fas fa-user-slash"></i>
+        <p>لا توجد شخصيات تطابق بحثك</p>
+    </div>
+</section>
+
+   <!-- ========================================================== -->
+<!-- 04 الجرائم الاستعمارية - COLONIAL CRIMES (إعادة بناء نهائية) -->
+<!-- ========================================================== -->
+<section id="crimes">
+    <div class="crimes-header">
+        <div class="section-number"><span class="num">04</span> / 11</div>
+        <div class="crimes-subtitle">COLONIAL CRIMES</div>
+        <div class="crimes-title">الجرائم <span class="highlight">الاستعمارية</span></div>
+    </div>
+
+    <div class="evidence-board" id="evidenceBoard">
+        <div class="cards-layer" id="cardsLayer"></div>
+    </div>
+</section>
+
+        <!-- ========================================================== -->
+        <!-- 05 المفاوضات - NEGOTIATIONS
+        ========================================================== -->
+        <section id="negotiations">
+            <div class="section-number"><span class="num">05</span> / 11</div>
+            
+            <h2 class="section-title">المفاوضات <span class="highlight">والاستقلال</span></h2>
+            <div class="section-placeholder">
+                <i class="fas fa-handshake"></i>
+                <h3>Timeline المفاوضات</h3>
+                <p style="color:var(--text-muted); font-size:0.8rem; margin-top:8px;">وثائق واتفاقيات</p>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 06 الإحصائيات - STATISTICS
+        ========================================================== -->
+        <section id="statistics">
+            <div class="section-number"><span class="num">06</span> / 11</div>
+            
+            <h2 class="section-title">الإحصائيات</h2>
+            <div class="section-placeholder">
+                <i class="fas fa-chart-bar"></i>
+                <h3>عدادات ورسوم بيانية</h3>
+                <p style="color:var(--text-muted); font-size:0.8rem; margin-top:8px;">أرقام وحقائق الثورة</p>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 07 الفيديوهات - VIDEOS
+        ========================================================== -->
+        <section id="videos">
+            <div class="section-number"><span class="num">07</span> / 11</div>
+            
+            <h2 class="section-title">الفيديوهات</h2>
+            <div class="section-placeholder">
+                <i class="fas fa-video"></i>
+                <h3>بطاقات الفيديوهات</h3>
+                <p style="color:var(--text-muted); font-size:0.8rem; margin-top:8px;">Preview ومشغل</p>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 08 الأسلحة - WEAPONS
+        ========================================================== -->
+        <section id="weapons">
+            <div class="section-number"><span class="num">08</span> / 11</div>
+            
+            <h2 class="section-title">الأسلحة</h2>
+            <div class="section-placeholder">
+                <i class="fas fa-gun"></i>
+                <h3>معرض الأسلحة</h3>
+                <p style="color:var(--text-muted); font-size:0.8rem; margin-top:8px;">صور وبطاقات</p>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 09 الإرث - LEGACY
+        ========================================================== -->
+        <section id="legacy">
+            <div class="section-number"><span class="num">09</span> / 11</div>
+            
+            <h2 class="section-title">الإرث <span class="highlight">الوطني</span></h2>
+            <div class="section-placeholder">
+                <i class="fas fa-landmark"></i>
+                <h3>العلم، المتاحف، الاستقلال</h3>
+                <p style="color:var(--text-muted); font-size:0.8rem; margin-top:8px;">ذاكرة وطن</p>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 10 الخريطة - MAP
+        ========================================================== -->
+        <section id="map">
+            <div class="section-number"><span class="num">10</span> / 11</div>
+            <h2 class="section-title">الخريطة <span class="highlight">التفاعلية</span></h2>
+            <div class="section-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>خريطة تفاعلية</h3>
+                <p style="color:var(--text-muted); font-size:0.8rem; margin-top:8px;">الولايات، المعارك، الشخصيات</p>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- 11 المصادر - SOURCES
+        ========================================================== -->
+        <section id="sources">
+            <div class="section-number"><span class="num">11</span> / 11</div>
+            <h2 class="section-title">المصادر <span class="highlight">والمراجع</span></h2>
+            <div class="section-placeholder">
+                <i class="fas fa-book"></i>
+                <h3>كتب، وثائق، مراجع</h3>
+                <p style="color:var(--text-muted); font-size:0.8rem; margin-top:8px;">مصادر موثقة</p>
+            </div>
+        </section>
+
+    </main>
+
+
+ <!-- ============================================================ -->
+    <!-- 13️⃣ FOOTER
+    ============================================================ -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-star"></i> المتحف الرقمي للثورة الجزائرية
+            </div>
+            
+            <div class="footer-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#timeline">الجدول الزمني</a>
+                <a href="#heroes">الشخصيات</a>
+                <a href="#map">الخريطة</a>
+                <a href="#sources">المصادر</a>
+            </div>
+            <div class="footer-copy">
+                <i class="fas fa-flag"></i> 2026 · جميع الحقوق محفوظة
+                <i class="fas fa-heart" style="color:var(--accent);"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
